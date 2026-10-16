@@ -1,0 +1,1 @@
+Folder audio menampung musik latar, efek suara, dan narasi. Paket ini sengaja tidak menyertakan rekaman suara; tambahkan file .ogg atau .mp3 milik sendiri dan implementasikan pemanggilannya di JavaScript setelah konten audio disiapkan.

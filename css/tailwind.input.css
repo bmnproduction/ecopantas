@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@source "../index.html";
+@source "../peta.html";
+@source "../pendamping.html";
+@source "../stasiun";
+@source "../js";

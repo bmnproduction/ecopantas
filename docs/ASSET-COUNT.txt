@@ -1,0 +1,2 @@
+Raster image assets included: 136
+SVG and notes included: 134

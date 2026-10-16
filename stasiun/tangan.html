@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#176b4a"><title>Tangan Terampil · ECO PANTAS</title><link rel="stylesheet" href="../css/tailwind.css"><link rel="stylesheet" href="../css/style.css"></head>
+<body class="app-page station-page" data-station="tangan">
+  <nav class="topbar wrap"><a class="brand" href="../index.html"><img src="../assets/images/logoecopantas.jpg" alt="Logo ECO PANTAS"><span><b>ECO PANTAS</b><small>Petualangan Ksatria Anjuk Ladang</small></span></a><div class="topbar-right"><div class="timer-chip" id="station-timer"><span class="timer-pulse"></span><span id="timer-value">07:00</span></div><a class="button button-quiet" href="../peta.html">Peta petualangan</a></div></nav>
+  <main id="station-root" class="wrap station-main" aria-live="polite"><div class="loading-card">Menyiapkan petualangan…</div></main>
+  <footer class="site-footer wrap"><span>Sinau • Peduli • Tumindak</span><a href="../pendamping.html">Panduan pendamping ↗</a></footer>
+  <script type="module" src="../js/stations/tangan.js"></script>
+ 
+<script>
+(function(){
+  var root=document.getElementById('station-root');
+  if(!root)return;
+  window.setTimeout(function(){
+    if(root.querySelector('.loading-card')){
+      root.innerHTML='<section class="timeout-panel"><div class="timeout-emoji">🌿</div><h2>Game belum berhasil dimuat</h2><p>Periksa apakah folder proyek sudah diekstrak lengkap dan jalankan melalui Live Server atau npm run serve. Pastikan folder js, css, dan assets tetap berada di dalam folder eco-pantas.</p><a class="button button-primary" href="../peta.html">Kembali ke peta</a></section>';
+    }
+  },5000);
+  window.addEventListener('error',function(e){
+    if(root.querySelector('.loading-card')){
+      root.innerHTML='<section class="timeout-panel"><div class="timeout-emoji">🛠️</div><h2>Ada masalah saat memuat game</h2><p>Modul permainan tidak berhasil dijalankan. Muat ulang halaman setelah memastikan semua berkas proyek ikut diekstrak.</p><a class="button button-primary" href="../peta.html">Kembali ke peta</a></section>';
+    }
+  });
+  window.addEventListener('unhandledrejection',function(){
+    if(root.querySelector('.loading-card')){
+      root.innerHTML='<section class="timeout-panel"><div class="timeout-emoji">🛠️</div><h2>Ada masalah saat memuat game</h2><p>Komponen permainan gagal dijalankan. Coba muat ulang halaman melalui server lokal.</p><a class="button button-primary" href="../peta.html">Kembali ke peta</a></section>';
+    }
+  });
+})();
+</script>
+<script src="../js/image-fallback.js" defer></script>
+</body></html>
