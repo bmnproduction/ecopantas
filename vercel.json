@@ -4,8 +4,3 @@
   "trailingSlash": false,
   "rewrites": [{ "source": "/", "destination": "/index.html" }]
 }
-
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "outputDirectory": "."
-}
